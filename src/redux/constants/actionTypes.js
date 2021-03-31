@@ -1,4 +1,3 @@
-export const FETCH_CLICKED = "FETCH_CLICKED";
 export const ON_SEARCH = "ON_SEARCH";
 export const ON_DRAG = "ON_DRAG";
 export const MOVE_ALL_TO_BASKET = "MOVE_ALL_TO_BASKET";

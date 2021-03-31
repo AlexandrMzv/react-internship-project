@@ -7,34 +7,52 @@ import CatalogLists from "./CatalogLists";
 const Catalog = () => {
   const dataFetchError = useSelector((state) => state.dataFetchError);
   const dataIsLoading = useSelector((state) => state.dataIsLoading);
-  const fetchClicked = useSelector((state) => state.fetchClicked.clicked);
+  const dataByIds = useSelector((state) => state.itemsReducer.data.byIds);
 
-  if (!fetchClicked) {
+  const dataIsReady =
+    !dataIsLoading && !dataFetchError && Object.keys(dataByIds).length;
+
+  if (dataIsLoading) {
+    return (
+      <div className="loader-wrapper">
+        <Loader
+          className="loader"
+          type="TailSpin"
+          color="#f1356d"
+          height={100}
+          width={100}
+        />
+      </div>
+    );
+  }
+
+  if (dataIsLoading) {
+    return (
+      <div className="loader-wrapper">
+        <Loader
+          className="loader"
+          type="TailSpin"
+          color="#f1356d"
+          height={100}
+          width={100}
+        />
+      </div>
+    );
+  }
+
+  if (!dataIsReady) {
     return (
       <div className="catalog">
+        {dataFetchError && <div>Fetch error</div>}
         <CatalogBeforeData />
       </div>
     );
   }
 
-  const dataIsReady = !dataIsLoading && !dataFetchError;
-
   return (
     <div className="catalog">
-      {dataFetchError && <div>Error</div>}
-      {dataIsLoading && (
-        <div className="loader-wrapper">
-          <Loader
-            className="loader"
-            type="TailSpin"
-            color="#f1356d"
-            height={100}
-            width={100}
-          />
-        </div>
-      )}
-      {dataIsReady && <Search />}
-      {dataIsReady && <CatalogLists />}
+      <Search />
+      <CatalogLists />
     </div>
   );
 };

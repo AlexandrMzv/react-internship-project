@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getData } from "../redux/actions/itemsActions";
-import { fetchClicked } from "../redux/actions/fetchClickedAction";
 import { URL } from "../config";
 
 const CatalogBeforeData = () => {
@@ -10,7 +9,6 @@ const CatalogBeforeData = () => {
   const dispatch = useDispatch();
   const handleGetData = (url) => {
     dispatch(getData(url));
-    dispatch(fetchClicked());
   };
 
   return (
