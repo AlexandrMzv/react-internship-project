@@ -1,0 +1,10 @@
+export const FETCH_CLICKED = "FETCH_CLICKED";
+export const ON_SEARCH = "ON_SEARCH";
+export const ON_DRAG = "ON_DRAG";
+export const MOVE_ALL_TO_BASKET = "MOVE_ALL_TO_BASKET";
+export const MOVE_ALL_TO_STOCK = "MOVE_ALL_TO_STOCK";
+export const MOVE_TO_BASKET = "MOVE_TO_BASKET";
+export const MOVE_TO_STOCK = "MOVE_TO_STOCK";
+export const SNEAKERS_DATA = "SNEAKERS_DATA";
+export const DATA_FETCH_ERROR = "DATA_FETCH_ERROR";
+export const DATA_IS_LOADING = "DATA_IS_LOADING";

@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  font-family: "Roboto";
+  color: #333;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #f1356d;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input {
+  max-width: 386px;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+.input label {
+  text-align: left;
+  display: block;
+}
+.input input,
+.input textarea,
+.input select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+div.sneaker-item {
+  display: flex;
+  width: 300px;
+  margin: auto;
+}
+
+p.sneaker-model {
+  width: 150px;
+  height: 40px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.sneaker-item img {
+  width: 100px;
+  height: 66px;
+  margin-right: auto;
+}
+
+.list {
+  min-height: 500px;
+  max-height: 500px;
+  min-width: 370px;
+  padding: 8px;
+  margin: auto;
+  overflow-y: scroll;
+  border-radius: 5px;
+}
+
+.list-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.draggable-dnd {
+  user-select: none;
+  padding: 16px;
+  margin: 0 0 8px 0;
+}
+
+.quote-item {
+  width: 300px;
+  border: 1px solid grey;
+  margin-bottom: 8px;
+  background-color: lightblue;
+  padding: 8px;
+}
+
+.dnd-sneaker-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-before-data {
+  text-align: center;
+}
+
+.preload-buttons-group {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  margin: 15px auto;
+}
+
+button {
+  width: 120px;
+  height: 50px;
+
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #9c2046;
+  color: #fff;
+}
+
+button.add-all-to-basket,
+button.add-all-to-stock {
+  margin: 10px auto;
+}
+
+button.icon-button {
+  width: 30px;
+  height: 33px;
+  padding: 3px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+button.active-btn {
+  background: #9c2046;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+button:disabled.fetch-button {
+  background-color: #cccccc;
+}
+
+span.md-white {
+  color: white;
+}
+
+.fetch-button {
+  width: 320px;
+
+  margin: 10px auto;
+  background: #74a635;
+}
+
+.fetch-button:hover {
+  margin: 10px auto;
+  background: #557a27;
+}
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
